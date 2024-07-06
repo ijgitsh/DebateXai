@@ -1,5 +1,4 @@
-# Creating the formatted README file content
-readme_content = """
+
 # Debater Panel Application
 
 ## Overview
