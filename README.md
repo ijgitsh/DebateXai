@@ -1,5 +1,5 @@
 
-# Debater Panel Application
+# Debater Panel Application : https://medium.com/@imanjohari/debate-simulation-with-generative-ai-31c12f7a8105
 
 ## Overview
 
