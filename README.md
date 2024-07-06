@@ -22,23 +22,24 @@ The Debater Panel Application is a web-based interface designed to manage and pr
 ## Installation
 
 1. **Clone the repository**:
-    \`\`\`bash
+
+    ```bash
     git clone https://github.com/ijgitsh/DebateXai.git
     cd DebateXai
-    \`\`\`
+    ```
 
 2. **Set up the backend**:
     - Create a virtual environment and activate it:
-        \`\`\`bash
+        ```bash
         python3 -m venv venv
         source venv/bin/activate  # On Windows: venv\\Scripts\\activate
-        \`\`\`
+        ```
     - Install the required packages:
-        \`\`\`bash
+        ```bash
         pip install -r requirements.txt
-        \`\`\`
-    - Create a \`config.py\` file in the root directory with the following content:
-        \`\`\`python
+        ```
+    - Create a `config.py` file in the root directory with the following content:
+        ```python
         # config.py
 
         # Replace with your IBM Cloud API key
@@ -55,14 +56,14 @@ The Debater Panel Application is a web-based interface designed to manage and pr
 
         # Watsonx.ai Project ID
         PROJECT_ID = 'your-project-id'
-        \`\`\`
+        ```
 
 3. **Run the backend server**:
-    \`\`\`bash
+    ```bash
     python modelserver.py
-    \`\`\`
+    ```
 
-4. **Open \`index.html\` in a web browser** to view the application.
+4. **Open `index.html` in a web browser** to view the application.
 
 ## Usage
 
@@ -87,25 +88,25 @@ The Debater Panel Application is a web-based interface designed to manage and pr
 
 ## REST API Endpoints
 
-### \`/models\` [GET]
+### `/models` [GET]
 
 Fetches the list of available models.
 
-### \`/getprompts\` [POST]
+### `/getprompts` [POST]
 
 Generates prompts based on the provided model and text.
 
-### \`/getresponse\` [POST]
+### `/getresponse` [POST]
 
 Generates a response based on the provided prompt, previous conversations, and model.
 
 ## Contributing
 
 1. Fork the repository
-2. Create a new branch (\`git checkout -b feature-branch\`)
+2. Create a new branch (`git checkout -b feature-branch`)
 3. Make your changes
-4. Commit your changes (\`git commit -am 'Add new feature'\`)
-5. Push to the branch (\`git push origin feature-branch\`)
+4. Commit your changes (`git commit -am 'Add new feature'`)
+5. Push to the branch (`git push origin feature-branch`)
 6. Create a new Pull Request
 
 ## License
