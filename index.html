@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Debater Panel</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="slidingPanel" class="panel">
+    <div class="menu-icon" onclick="togglePanel()">☰</div>
+    <div class="panel-content hidden">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">Debaters</button>
+                <div class="accordion-content">
+                    <!-- Form Panel -->
+                    <div class="group-panel">
+                        <h3>Debater Information</h3>
+                        <button id="addDebaterBtn">Add Debater</button>
+                        <div id="formContainer" class="hidden">
+                            <div class="image-upload">
+                                <img id="imagePreview" src="placeholder.png" alt="Image Preview">
+                                <input type="file" id="imageUpload" accept="image/*">
+                            </div>
+                            <input type="text" id="debaterName" placeholder="Name of the Debater">
+                            <div>
+                                <label>Attributes</label>
+                                <button id="addAttributeBtn">+</button>
+                            </div>
+                            <select id="attributeDropdown">
+                                <!-- Options will be populated here -->
+                            </select>
+                            <div id="attributesContainer"></div>
+                            <button id="submitDebater">Add Debater</button>
+                            <button id="resetForm" class="hidden">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- List Panel -->
+                <div class="group-panel">
+                    <h3>Active Debaters</h3>
+                    <ul id="debaterList"></ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Debate</button>
+                <div class="accordion-content">
+                    <!-- Debate Subject and Number of Tokens -->
+                    <div class="group-panel">
+                        <textarea id="debateSubject" placeholder="Debate Subject"></textarea>
+                        <input type="text" id="numberOfTokens" placeholder="Number of Tokens">
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Configuration</button>
+                <div class="accordion-content">
+                    <button id="saveConfig">Load Models</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mainPanel" class="main-panel">
+    <div class="debater-container-wrapper"></div> <!-- Wrapper for debater containers -->
+    <div class="debate-container-wrapper group-panel">
+        <h3>Debates</h3>
+        <button id="deleteCooments">Reset Conversation</button>
+        <div id="debateContainer"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

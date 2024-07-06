@@ -1,0 +1,247 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF; /* White background */
+}
+
+.panel {
+    width: 300px;
+    min-height: 100vh;
+    background: #0055A4; /* Blue background for panel */
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start collapsed */
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.5s;
+    color: #FFFFFF; /* White text */
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    left: 10px; /* Menu icon visible at all times */
+    top: 10px;
+    z-index: 1000; /* Ensures menu is on top */
+    color: #FFFFFF; /* White color for menu icon */
+}
+
+.panel-content {
+    padding-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-upload img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50%; /* Make image circular */
+    padding: 5px;
+    background: #FFFFFF; /* White background for image */
+}
+
+.image-upload input[type="file"], input[type="text"], select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #EF4135; /* Red background for buttons */
+    color: #FFFFFF; /* White text */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc342b; /* Darker red for hover effect */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+ul li img {
+    border-radius: 50%; /* Make added images circular */
+    background: #FFFFFF; /* White background for images */
+}
+
+ul li button {
+    background-color: #EF4135; /* Red background for buttons */
+    color: #FFFFFF; /* White text */
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li button:disabled {
+    background-color: #ccc; /* Grey out the button when disabled */
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the debaters */
+    height: 100vh;
+    margin-left: 300px; /* Adjust margin to account for the sliding panel */
+    background: #FFFFFF; /* White background for main panel */
+    padding-top: 20px; /* Add padding to lower the debaters */
+}
+
+.debater-container-wrapper {
+    width: 100%; /* Full width for debater containers */
+}
+
+.debate-container-wrapper {
+    width: 80%; /* 80% width for debate container */
+    margin-top: 20px;
+}
+
+.debater-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding-left: 75px;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-button {
+    background-color: #0055A4; /* Blue background for accordion buttons */
+    color: #FFFFFF; /* White text */
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s;
+    font-size: 18px;
+}
+
+.accordion-button:hover {
+    background-color: #003f7f; /* Darker blue for hover effect */
+}
+
+.accordion-content {
+    padding: 10px 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #FFFFFF; /* White background for content */
+}
+
+.accordion-content.show {
+    display: block;
+}
+
+select {
+    background-color: #FFFFFF; /* White background */
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.group-panel {
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-panel h3 {
+    margin-top: 0;
+    color: #0055A4; /* Blue color for titles */
+}
+
+.talk-button {
+    background-color: #EF4135; /* Red background for buttons */
+    color: #FFFFFF; /* White text */
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.talk-button:hover {
+    background-color: #cc342b; /* Darker red for hover effect */
+}
+
+.debate-item {
+    background-color: #f9f9f9; /* Light grey background for debate items */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.debate-item img {
+    margin-right: 15px;
+    border-radius: 50%; /* Make the debater image circular */
+}
+
+.debate-item .debater-name {
+    font-size: 14px;
+    color: #0055A4; /* Blue color for debater name */
+    margin-top: 5px;
+}
+
+.debate-item span.debater-comment {
+    font-size: 16px;
+    color: #333;
+    background-color: #e0e0e0; /* Light grey background for text */
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    width: calc(100% - 75px); /* Ensure text takes the rest of the space */
+    margin-left: 10px;
+}
