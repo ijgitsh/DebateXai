@@ -1,9 +1,10 @@
-
+# Creating the formatted README file content
+readme_content = """
 # Debater Panel Application
 
 ## Overview
 
-The Debater Panel Application is a web-based interface designed to manage and present debater information. The application features an interactive sliding panel with an accordion structure, allowing users to add debaters, view active debaters, and configure settings. Additionally, the app integrates with a backend service to fetch model data and generate prompts based on user inputs. In the end each debater will be able to get involved in a debate based on a given subject.
+The Debater Panel Application is a web-based interface designed to manage and present debater information. The application features an interactive sliding panel with an accordion structure, allowing users to add debaters, view active debaters, and configure settings. Additionally, the app integrates with a backend service to fetch model data and generate prompts based on user inputs. In the end, each debater will be able to get involved in a debate based on a given subject.
 
 ## Features
 
@@ -30,7 +31,7 @@ The Debater Panel Application is a web-based interface designed to manage and pr
     - Create a virtual environment and activate it:
         \`\`\`bash
         python3 -m venv venv
-        source venv/bin/activate  # On Windows: venv\Scripts\activate
+        source venv/bin/activate  # On Windows: venv\\Scripts\\activate
         \`\`\`
     - Install the required packages:
         \`\`\`bash
@@ -43,7 +44,7 @@ The Debater Panel Application is a web-based interface designed to manage and pr
         # Replace with your IBM Cloud API key
         CLOUD_API_KEY = 'your-cloud-api-key'
 
-        # IBM cloud authentication URL
+        # IBM Cloud authentication URL
         AUTH_URL = 'https://iam.cloud.ibm.com/identity/token'
 
         # API call to get models deployed in Watsonx.ai
@@ -53,7 +54,7 @@ The Debater Panel Application is a web-based interface designed to manage and pr
         GENERATE_URL = 'https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29'
 
         # Watsonx.ai Project ID
-        PROJECT_ID = "your-project-id"
+        PROJECT_ID = 'your-project-id'
         \`\`\`
 
 3. **Run the backend server**:
@@ -64,6 +65,7 @@ The Debater Panel Application is a web-based interface designed to manage and pr
 4. **Open \`index.html\` in a web browser** to view the application.
 
 ## Usage
+
 - **Configuration**:
   - Click on the "Configuration" section to load models.
   - Click "Load Models" to fetch and populate the dropdown with model data.
@@ -77,11 +79,11 @@ The Debater Panel Application is a web-based interface designed to manage and pr
   - The added debaters will appear in the "Active Debaters" list.
   - Click the "+" button to add the debater to the main panel and generate a prompt.
 
-- **add Subject and number of tokesns**:
-  - Under Debate accordion add a subject and token
+- **Add Subject and Number of Tokens**:
+  - Under the Debate accordion, add a subject and token.
 
-- **talk**:
-  - Each candidate will talk based on the number of token, subject and previous conversations in the debate
+- **Talk**:
+  - Each candidate will talk based on the number of tokens, subject, and previous conversations in the debate.
 
 ## REST API Endpoints
 
@@ -95,7 +97,7 @@ Generates prompts based on the provided model and text.
 
 ### \`/getresponse\` [POST]
 
-Generates reponse based on the provided prompt, previous conversations and  model.
+Generates a response based on the provided prompt, previous conversations, and model.
 
 ## Contributing
 
@@ -113,3 +115,8 @@ This project is licensed under the MIT License.
 ## Contact
 
 If you have any questions or suggestions, feel free to reach out!
+"""
+
+# Writing the content to a README.md file
+with open("/mnt/data/README.md", "w") as file:
+    file.write(readme_content)
